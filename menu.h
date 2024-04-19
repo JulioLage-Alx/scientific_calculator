@@ -1,46 +1,31 @@
 #include <stdio.h>
+#include "sinais.h"
 
 int menu() {
-    int choice;
-    float n,m;
+   
+    char *sinal_1,sina[1]={"="};
+    float num_1,*cont;
+    int i,sair=10,n=10,fim,exit;
 
-    printf("Menu:\n");
-    printf("1. Adição\n");
-    printf("2. Subritacao\n");
-    printf("3. Mutiplicacao\n");
-    printf("4. Exit\n");
+       for ( i = 1; i < sair; i++)
+       {
+            cont = (float*)calloc(n,sizeof(float));
+            sinal_1 = (char*)malloc(1*sizeof(char));
+            scanf("%f",&num_1);
+            scanf("%s",&sinal_1[1]);
+            cont[i]= num_1;
+            cont[i] = sinais(sinal_1,cont[i]);
+            exit =strncmp(sinal_1,sina[1],1);
+            if (exit>0)
+            {
+                fim = sair +2;
+                i = fim;
+            }
+            sair ++;
+            n++;
+            free(sinal_1);
 
-    printf("Enter your choice: ");
-    scanf("%d", &choice);
-
-    switch(choice) {
-        case 1:
-            printf("Entre com o primeiro numero\n");
-            scanf("%f",&n);
-            printf("Entre com o segundo numero\n");
-            scanf("%f",&m);
-            printf("%f",m+n);
-            break;
-        case 2:
-             printf("Entre com o primeiro numero\n");
-            scanf("%f",&n);
-            printf("Entre com o segundo numero\n");
-            scanf("%f",&m);
-            printf("%f",m-n);
-            break;
-        case 3:
-             printf("Entre com o primeiro numero\n");
-            scanf("%f",&n);
-            printf("Entre com o segundo numero\n");
-            scanf("%f",&m);
-            printf("%f",m*n);
-            break;
-        case 4:
-            printf("Exiting...\n");
-            break;
-        default:
-            printf("Invalid choice.\n");
-    }
-
+       }
+        
     return 0;
 }
