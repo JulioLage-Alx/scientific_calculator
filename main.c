@@ -2,10 +2,15 @@
 #include <stdlib.h>
 #include <math.h>
 
-void display();
+void display(
+
+
+
+    
+);
 
 int main(void){
-    display()
+    display();
     return 0;
 }
 
