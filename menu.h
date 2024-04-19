@@ -3,7 +3,7 @@
 
 int menu() {
    
-    char *sinal_1,sina[1]={"="};
+    char *sinal_1,sina[4]={"="};
     float num_1,*cont;
     int i,sair=10,n=10,fim,exit;
 
