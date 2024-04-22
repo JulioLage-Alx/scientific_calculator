@@ -23,7 +23,7 @@ int Sinais(char sinal[], float numero)
         scanf("%f", &num_2);
         soma = adicao(numero, num_2);
     }
-    exit = strncmp(sinal, S[5], 1);
+    exit = strncmp(sinal, S[4], 1);
     if (exit > 0)
     {
         printf("%f", soma);
